@@ -3,8 +3,10 @@
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
-    transition: all 0.8s ease; */
-/* background-color: rgb(201, 0, 0); */
+    transition: all 0.8s ease;
+     display: block;
+    justify-items: center;
+} */
 
 .bodyContainer {
   padding: 0 auto;
@@ -13,19 +15,29 @@
   /* background-color: rgb(0, 0, 0);  */
   scroll-behavior: smooth;
   transition: all 0.8s ease;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: center;
   /* height: auto;   */
+  background-image: url(/black.jpeg);
+  color: #f2f2f2;
 }
 
-/* .b1 {
-    height: 95vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
+.newbox {
+  /* Target paragraphs within the .newbox element */
+  height: 650px;
+  color: #f2f2f2;
+  text-align: center;
+  background-color: #ff791f;
+  border-radius: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.newboxdrop {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
 /* desktop */
 .h1,
 .h2,
@@ -33,28 +45,30 @@
 .h4,
 .h5,
 .h6 {
-  color: rgb(0, 0, 0, 0.85);
+  position: relative;
+  top: 76px;
+  color: rgb(0, 0, 0);
   font-size: 8vh;
   letter-spacing: -0.06em;
   line-height: 0rem;
   font-family: "Bodoni Moda", serif;
-
   line-height: 0rem;
   text-transform: uppercase;
 
+  height: 80px;
   font-family: "Bodoni Moda", serif;
-  /* font-weight: bold; */
+  font-weight: bold;
   /* Stack elements vertically */
   display: block;
-  flex-direction: column; /* Align elements on top of each other */
-  align-items: center; /* Center elements horizontally */
-  justify-content: center; /* Center elements vertically */
+  flex-direction: column;
+  /* align-items: center; Center elements horizontally */
+  /* justify-content: center; Center elements vertically */
   font-weight: 500;
-  text-align: center;
+  /* text-align: center; */
 }
 .h6 {
   position: relative;
-  top: 5px;
+  top: 95px;
   font-size: 11.5vh;
   font-family: "Tilt Warp", sans-serif;
   line-height: 0;
@@ -63,23 +77,24 @@
 .Firstbox {
   display: flex;
   justify-content: center;
+  margin-top: 200px;
 }
 /* 
-.playerwrapper {
-    display: none;
-} */
+    .playerwrapper {
+        display: none;
+    } */
 
 /* .heading {
-    width: 55%;
-    /* height: auto; */
+        width: 55%;
+        /* height: auto; */
 /* justify-content: center; */
 /* color: rgb(0, 0, 0, .85);
-    background-color: white; */
+        background-color: white; */
 /* border: 2px solid rgb(255, 0, 0); */
 /* padding-top: 80px;
-    padding-bottom: 80px;
-    margin-left: auto;
-    margin-right: auto; */
+        padding-bottom: 80px;
+        margin-left: auto;
+        margin-right: auto; */
 /* -webkit-box-flex: 1; */
 /* flex-grow: 1; */
 /* display: flex; */
@@ -87,34 +102,38 @@
 /* flex-direction: column; */
 /* -webkit-box-pack: center; */
 /* 
-     font-size: 5rem; 
-    line-height: 11rem;
-    letter-spacing: -0.06em;
-    text-transform: uppercase;
-    text-align: center; */
+         font-size: 5rem; 
+        line-height: 11rem;
+        letter-spacing: -0.06em;
+        text-transform: uppercase;
+        text-align: center; */
 
 /* } */
 
 /* .we_belive {
-    font-size: 7rem;
-    letter-spacing: -0.06em;
-    line-height: 9rem;
-    font-family: 'Bodoni Moda', serif;
-} */
+        font-size: 7rem;
+        letter-spacing: -0.06em;
+        line-height: 9rem;
+        font-family: 'Bodoni Moda', serif;
+    } */
 /* 
-.future {
-    position: relative;
-    top: 5px;
-    font-size: 10rem;
-    font-family: 'Tilt Warp', sans-serif;
-} */
+    .future {
+        position: relative;
+        top: 5px;
+        font-size: 10rem;
+        font-family: 'Tilt Warp', sans-serif;
+    } */
 
 .heading1 {
   /* desktop */
   font-family: "Bodoni Moda", serif;
-  width: 90%;
+  width: 100%;
+  height: 500px;
   display: flex;
+  padding: 10px;
   justify-content: center;
+  justify-items: center;
+  align-items: center;
   position: relative;
   font-size: 2.5em;
   text-align: justify;
@@ -129,17 +148,49 @@
   position: relative;
   font-size: 2.5em;
   text-align: justify;
-}
 
-.para {
+  font-family: "Bodoni Moda", serif;
   width: 100%;
+  height: 300px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  font-size: 2.5em;
+  text-align: justify;
 }
 
-.para1 {
+.paramob {
+  /* desktop */
   position: relative;
+  background-color: #959595;
+  border-radius: 3rem;
+  justify-items: center;
+  text-align: center;
+  width: 90%;
+  /* height: 600px; */
+  justify-content: center;
+  top: 30px;
+
+  margin: 0px auto;
+
+  font-size: 0.8em;
+}
+
+.laptoppara {
+  position: relative;
+  align-items: center;
+  justify-items: center;
   margin-top: -300px;
   display: flex;
   justify-content: center;
+  position: relative;
+  background-color: #959595;
+  border-radius: 3rem;
+  width: 90%;
+  left: 6.2rem;
 }
 .centerpic {
   display: flex;
@@ -150,13 +201,13 @@
 
 .pic {
   /* position: relative;
-    display: flex;
-    border-radius: 50%;
-    align-items: center;
-    margin: 100px auto;
-    margin-bottom: 100px;
-    z-index: 1; old before layering animation
- */
+        display: flex;
+        border-radius: 50%;
+        align-items: center;
+        margin: 100px auto;
+        margin-bottom: 100px;
+        z-index: 1; old before layering animation
+     */
 
   /* height: auto; */
   width: auto;
@@ -171,10 +222,10 @@
   justify-content: center;
 }
 .paragraph {
-  transition: opacity 1s;
-  font-size: 18px;
+  transition: opacity 1.5s;
+  font-size: 1.5em;
   text-align: justify;
-  max-width: 420px;
+  width: 750px;
 }
 .iphone {
   position: absolute;
@@ -187,10 +238,10 @@
   width: 375px;
 }
 
-/* .playerwrapper{
-    position: relative;
-    display: block;
-} */
+.playerwrapper {
+  position: relative;
+  display: block;
+}
 
 .centre {
   margin-left: auto;
@@ -236,9 +287,9 @@
   }
 
   /* .Firstbox{
-        width: 100px;
-        height: auto;
-    } */
+            width: 100px;
+            height: auto;
+        } */
 
   .heading {
     width: 20%;
@@ -247,16 +298,16 @@
     z-index: 2;
   }
   /* 
-    .b1
-     {
-        position: relative;
-        left: -40%;
-        height: 110vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        perspective: -10px;
-    } */
+        .b1
+         {
+            position: relative;
+            left: -40%;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: -10px;
+        } */
 
   .pic {
     position: absolute;
@@ -286,15 +337,15 @@
     max-width: 300px;
     padding-left: auto;
     padding-right: auto;
-    width: 100%;
+    /* width: 80%; */
   }
 
   .socialc {
-    width: 100%;
-    position: relative;
-    padding-left: auto;
-    padding-right: auto;
-    /* left: 35%; */
+    /* width: 100%; 
+            position: relative;
+            padding-left: auto;
+            padding-right: auto;
+            /* left: 35%; */
   }
 
   .downloadResumeButton {
@@ -329,7 +380,7 @@
   }
 
   .heading1 {
-    width: 100%;
+    /* width: 100%; */
     position: relative;
     justify-items: center;
     justify-content: auto;
@@ -337,10 +388,10 @@
     font-size: 1.65em;
   }
 
-  .para {
-    position: absolute;
+  .paramob {
+    position: relative;
     justify-items: center;
-
+    top: 200px;
     width: 90%;
     justify-content: center;
 
@@ -357,7 +408,7 @@
 
   /* mobile */
 
-  .para1 {
+  .laptoppara {
     position: relative;
     justify-items: center;
 
@@ -371,7 +422,7 @@
   }
 
   .heading2 {
-    width: 100%;
+    /* width: 100%; */
     position: relative;
     justify-items: center;
     justify-content: auto;
@@ -380,15 +431,15 @@
   }
 
   /* .b1 {
-        margin-top: -100px;
-        padding-bottom: 20px;
-        height: 95vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    
-    } */
+            margin-top: -100px;
+            padding-bottom: 20px;
+            height: 95vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        
+        } */
 
   .heading {
     /* height: auto; */
@@ -415,17 +466,17 @@
     /* text-align: center; */
   }
   /* .we_belive {
-        font-size: 4rem;
-        letter-spacing: -0.06em;
-        line-height: 5.5rem;
-        font-family: 'Bodoni Moda', serif;
-    } */
+            font-size: 4rem;
+            letter-spacing: -0.06em;
+            line-height: 5.5rem;
+            font-family: 'Bodoni Moda', serif;
+        } */
   /* .future {
-        position: relative;
-        top: 5px;
-        font-size: 6.97rem;
-        font-family: 'Tilt Warp', sans-serif;
-    } */
+            position: relative;
+            top: 5px;
+            font-size: 6.97rem;
+            font-family: 'Tilt Warp', sans-serif;
+        } */
   /* mobile */
   .iphone {
     width: 335;
@@ -490,6 +541,7 @@
 
   .newbox {
     max-width: auto;
+    color: #f2f2f2;
   }
   .laptopdiv {
     display: none;
@@ -502,58 +554,75 @@
 }
 
 /* 
-@media (min-width: 768px) and (max-width: 1023px) {
-
-    .heading {
-        width: 100%;
-        height: 50%;
-        left: 10%;
-        z-index: 1;
+    @media (min-width: 768px) and (max-width: 1023px) {
+    
+        .heading {
+            width: 100%;
+            height: 50%;
+            left: 10%;
+            z-index: 1;
+        }
+    
+        .Firstbox {
+            display: flex;
+    
+        }
+    
+        .heading1 {
+            width: 60%;
+            justify-content: center;
+            left: 54%;
+        }
+    
+        .pic {
+            position: relative;
+            left: 10%;
+            bottom: 10px;
+        }
+    
+        .playerwrapper {
+            position: relative;
+            left: 0%;
+            display: block;
+        }
     }
+     */
 
-    .Firstbox {
-        display: flex;
-
-    }
-
-    .heading1 {
-        width: 60%;
-        justify-content: center;
-        left: 54%;
-    }
-
-    .pic {
-        position: relative;
-        left: 10%;
-        bottom: 10px;
-    }
-
-    .playerwrapper {
-        position: relative;
-        left: 0%;
-        display: block;
-    }
-
-
+.but {
+  display: flex;
+  position: relative;
+  top: 60px;
+  left: -300px;
+  justify-content: center;
+  align-items: center;
 }
-
-
-
- */
-
+.buttonparentsparent {
+  display: flex;
+  justify-content: center;
+}
+.buttonparent {
+  flex-direction: column;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80rem;
+  border-radius: 4rem;
+}
 .buttond {
   display: flex;
   justify-content: center;
-  height: 100px;
-  padding-bottom: 50px;
-  left: auto;
-  pointer-events: none;
+  align-items: center;
+  position: relative;
+  width: 30%;
+  border-radius: 50px;
+  top: -13rem;
 }
 
 .downloadResumeButton {
   /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
   padding: 20px 25px;
-  position: absolute;
+  /* position: absolute; */
   border-radius: 25px;
   justify-content: center;
   justify-items: center;
@@ -579,6 +648,20 @@
   animation: blink 1.5s infinite;
 }
 
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  /* max-width: 500px; */
+  position: relative;
+  top: -5rem;
+  width: 20%;
+
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  /* padding-bottom: 160px; */
+}
+
 @keyframes blink {
   0%,
   100% {
@@ -599,22 +682,11 @@
   animation: none;
 }
 
-.social {
-  display: flex;
-  justify-content: space-around;
-  max-width: 500px;
-
-  margin-left: auto;
-  margin-right: auto;
-
-  padding-bottom: 200px;
-}
-
 .banner {
   background-color: #f2f2f2;
   padding: 50px;
   overflow: hidden;
-  width: 100%;
+  /* width: 100%; */
   height: 50px;
 }
 
@@ -630,40 +702,40 @@
 }
 
 /* @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    10% {
-      transform: translateX(-10px);
-    }
-    20% {
-      transform: translateX(-20px);
-    }
-    30% {
-      transform: translateX(-30px);
-    }
-     40% {
-      transform: translateX(-40px);
-    }
-    50% {
-      transform: translateX(-50px);
-    }
-    60% {
-      transform: translateX(-40px);
-    }
-     70% {
-      transform: translateX(-30px);
-    }
-    80% {
-      transform: translateX(-20px);
-    }
-    90% {
-      transform: translateX(-10px);
-    }
-     100% {
-      transform: translateX(0px);
-    }   
-} */
+        0% {
+          transform: translateX(0);
+        }
+        10% {
+          transform: translateX(-10px);
+        }
+        20% {
+          transform: translateX(-20px);
+        }
+        30% {
+          transform: translateX(-30px);
+        }
+         40% {
+          transform: translateX(-40px);
+        }
+        50% {
+          transform: translateX(-50px);
+        }
+        60% {
+          transform: translateX(-40px);
+        }
+         70% {
+          transform: translateX(-30px);
+        }
+        80% {
+          transform: translateX(-20px);
+        }
+        90% {
+          transform: translateX(-10px);
+        }
+         100% {
+          transform: translateX(0px);
+        }   
+    } */
 
 .Rplayer {
   display: flex;
