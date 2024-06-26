@@ -46,7 +46,7 @@
 .h5,
 .h6 {
   position: relative;
-  top: 76px;
+  top: -2px;
   color: rgb(0, 0, 0);
   font-size: 8vh;
   letter-spacing: -0.06em;
@@ -55,7 +55,7 @@
   line-height: 0rem;
   text-transform: uppercase;
 
-  height: 80px;
+  height: 0px;
   font-family: "Bodoni Moda", serif;
   font-weight: bold;
   /* Stack elements vertically */
@@ -68,7 +68,7 @@
 }
 .h6 {
   position: relative;
-  top: 95px;
+  top: 5px;
   font-size: 11.5vh;
   font-family: "Tilt Warp", sans-serif;
   line-height: 0;
@@ -616,7 +616,7 @@
   position: relative;
   width: 30%;
   border-radius: 50px;
-  top: -13rem;
+  top: -10rem;
 }
 
 .downloadResumeButton {
