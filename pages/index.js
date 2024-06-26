@@ -5,7 +5,7 @@ import stylec from "/styles/globals.css";
 import Image from "next/image";
 import Head from "next/head";
 import ReactPlayer from "react-player";
-import { gsap, ScrollTrigger } from "gsap";
+import gsap from "gsap";
 import CustomCursor from "../components/CustomCursor";
 
 const YourComponent = () => {
@@ -18,119 +18,23 @@ const YourComponent = () => {
   // Profile pic and paragraph
   const imageRef = useRef(null);
   const paraRef = useRef(null);
-  const wepara = useRef(null);
-  const wevparaa = useRef(null);
-  const wevparab = useRef(null);
-  const wevparac = useRef(null);
-  const wevparad = useRef(null);
-  const wevparae = useRef(null);
-  const wevparaf = useRef(null);
-  const centerpic = useRef(null);
-
-  const buttonRef = useRef(null);
-  const social = useRef(null);
-
   useEffect(() => {
     const tl = gsap.to(imageRef.current, {
       yoyo: true,
-      x: 590,
-      duration: 3,
-      delay: 1,
+      x: 420,
+      duration: 8,
+      delay: 2,
     });
     const para = gsap.to(paraRef.current, {
       yoyo: true,
-      duration: 4,
+      duration: 8,
       opacity: 1,
       delay: 2,
     });
-    const weheading = gsap.to(wepara.current, {
-      yoyo: true,
-      duration: 1,
-      opacity: 1,
-      delay: 0,
-    });
-    gsap.to(paraRef.current, { yoyo: true, delay: 3, opacity: 1, y: -350 });
-    //  gsap.to(wevpara.current, { yoyo: true, duration: 3, opacity: 1 ,delay: 0 });
-    gsap.to(imageRef.current, {
-      yoyo: true,
-      x: 590,
-      duration: 3,
-      delay: 3,
-      y: -350,
-    });
-
-    gsap.to(wevparaa.current, {
-      yoyo: true,
-      duration: 2,
-      delay: 3,
-      marginRight: 1200,
-    });
-    gsap.to(wevparab.current, {
-      yoyo: true,
-      duration: 2,
-      delay: 3,
-      marginRight: 1200,
-    });
-    gsap.to(wevparac.current, {
-      yoyo: true,
-      duration: 2,
-      delay: 3,
-      marginRight: 1200,
-    });
-    gsap.to(wevparad.current, {
-      yoyo: true,
-      duration: 2,
-      delay: 3,
-      marginRight: 1200,
-    });
-    gsap.to(wevparae.current, {
-      yoyo: true,
-      duration: 2,
-      delay: 3,
-      marginRight: 1200,
-    });
-    gsap.to(wevparaf.current, {
-      yoyo: true,
-      duration: 2,
-      delay: 3,
-      marginRight: 1200,
-    });
-
-    //  gsap.fromTo(imageRef.current, { opacity: 0 }, { opacity: 1 });
+    gsap.fromTo(imageRef.current, { opacity: 0 }, { opacity: 1 });
 
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     gsap.fromTo(imageRef.current, { opacity: 0 }, { opacity: 1 });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const button = document.getElementById("buttond");
-      button.addEventListener("mouseenter", () => {
-        gsap.to(button, { x: 10, duration: 0.3 });
-      });
-    });
-
-    const button = buttonRef.current;
-
-    button.addEventListener("mouseenter", () => {
-      gsap.to(button, { y: 10, duration: 0.3 });
-    });
-
-    button.addEventListener("mouseleave", () => {
-      gsap.to(button, { x: 0, duration: 0.3 });
-    });
-    gsap.to(centerpic.current, {
-      yoyo: true,
-      duration: 2,
-      delay: 3,
-      height: 100,
-    });
-    gsap.to(buttonRef.current, {
-      yoyo: true,
-      duration: 2,
-      delay: 3,
-      backgroundColor: "#00ab7b",
-      marginBottom: 20,
-    });
-    // gsap.to(social.current, { yoyo: true,    duration: 2 , delay: 3, backgroundColor:"#00ab7b"  });
 
     if (isMobile) {
       //Create mobile-specific timeline
@@ -158,7 +62,6 @@ const YourComponent = () => {
       });
       //Pause the main timeline (tl) before playing mobileTl
       tl.pause();
-      weheading.pause();
       mobileTl.play();
     } else {
       // Play the main timeline for deskt
@@ -181,15 +84,12 @@ const YourComponent = () => {
           rel="stylesheet"
         />
         <title> Himalaya Jhala portfolio</title>
-        <header> Himalaya </header>
         <meta
           name="Himalaya Jhala Portfolio website"
           content=" Web Developer: Explore the portfolio of Himalaya Jhala, showcasing his expertise in crafting user-friendly and impactful web experiences using JavaScript, HTML, CSS, React,React Native  Next.js, and Node.js and strong UI/UX design skills."
         />
         <meta name="theme-color" content="WHITE" />
       </Head>
-      {/* <audio src="https://www.youtube.com/watch?v=4yv4ea1pFp4"></audio> */}
-
       {/* <CustomCursor/> */}
       <div className={styles.scrollBehavior}>
         {/* <div className={styles.b1}>
@@ -202,38 +102,18 @@ const YourComponent = () => {
 
         {/* Heading */}
 
-        <div ref={wepara} className={styles.newboxdrop} style={{ opacity: 0 }}>
-          <div className={styles.newbox}>
-            <p ref={wevparaa} className={styles.h1}>
-              {" "}
-              WE{" "}
-            </p>
-            <p ref={wevparab} className={styles.h2}>
-              {" "}
-              BELIEVE
-            </p>
-            <p ref={wevparac} className={styles.h3}>
-              {" "}
-              DEVELOPER
-            </p>
-            <p ref={wevparad} className={styles.h4}>
-              {" "}
-              SHAPE
-            </p>
-            <p ref={wevparae} className={styles.h5}>
-              {" "}
-              THE
-            </p>
-            <p ref={wevparaf} className={styles.h6}>
-              {" "}
-              FUTURE
-            </p>
-          </div>
+        <div className={styles.newbox}>
+          <p className={styles.h1}> WE </p>
+          <p className={styles.h2}> BELIEVE</p>
+          <p className={styles.h3}> DEVELOPER</p>
+          <p className={styles.h4}> SHAPE</p>
+          <p className={styles.h5}> THE</p>
+          <p className={styles.h6}> FUTURE</p>
         </div>
 
         {/* Profilepic */}
 
-        {/* <div className="styles.iiitem">
+        <div className="styles.iiitem">
           <div className="item"></div>
           <div className="item"></div>
           <div className="item"></div>
@@ -248,8 +128,8 @@ const YourComponent = () => {
           <div className="item"></div>
           <div className="item"></div>
           <div className="item"></div>
-        </div> */}
-        <div className={styles.centerpic} ref={centerpic}>
+        </div>
+        <div className={styles.centerpic}>
           <Image
             ref={imageRef}
             className={styles.pic}
@@ -263,9 +143,9 @@ const YourComponent = () => {
             className={styles.paragraph}
             style={{ opacity: 0, position: "relative" }}
           >
-            Im Himalaya : a versatile frontend developer proficient in ReactJS,
+            Himalaya: a versatile frontend developer proficient in ReactJS,
             React Native, Next.js and more. With a strong focus on creating
-            exceptional UI,UX across web and mobile platforms. I excel in
+            exceptional UI, UX across web and mobile platforms. I excel in
             collaborating with cross-functional teams to deliver high-quality
             products. My expertise extends to building responsive interfaces,
             optimizing performance, and ensuring seamless navigation. Beyond
@@ -275,63 +155,50 @@ const YourComponent = () => {
         </div>
 
         {/* Downloadbutton */}
-        <div className={styles.buttonparentsparent}>
-          <div className={styles.buttonparent} ref={buttonRef}>
-            <div className={styles.but}>
-              <Image
-                style={{ borderRadius: 18, width: 180 }}
-                className="rounded-xl"
-                src="/ResumeThumbnail.png"
-                alt="ResumeThumbnail"
-                width={150}
-                height={200}
-              />
-            </div>
-            <div className={styles.buttond}>
-              <a
-                href="https://drive.google.com/file/d/1dT7FtGMpG54BA-KBPT4j2OV2IGo-Piq4/view?usp=sharing"
-                className={styles.downloadResumeButton}
-                aria-label="Download Resume"
-              >
-                Download Resume
+        <div className={styles.buttond}>
+          <a
+            href="/path-to-your-resume.pdf"
+            download="Your_Resume_Name.pdf"
+            className={styles.downloadResumeButton}
+          >
+            Download Resume
+          </a>
+        </div>
+
+        {/* SocialLink */}
+        <div className={styles.socialc}>
+          <div className={styles.social}>
+            <div className={styles.socials1}>
+              <a href="https://www.linkedin.com/in/himalaya-jhala-879542231/">
+                <Image
+                  src="/linkedin.png"
+                  alt="leetcode"
+                  width={50}
+                  height={50}
+                />
               </a>
             </div>
 
-            {/* SocialLink */}
-            {/* <div className={styles.socialc} > */}
-            <div className={styles.social} ref={social}>
-              <div className={styles.socials1}>
-                <a href="https://www.linkedin.com/in/himalaya-jhala-879542231/">
-                  <Image
-                    src="/linkedin.png"
-                    alt="leetcode"
-                    width={60}
-                    height={60}
-                  />
-                </a>
-              </div>
-              {/* 
-              <div className={styles.socials2}>
-                <a href="https://leetcode.com/HimalayaJhala/">
-                  <Image
-                    src="/leetcode.png"
-                    alt="leetcode"
-                    width={50}
-                    height={50}
-                  />
-                </a>
-              </div> */}
+            <div className={styles.socials2}>
+              <a href="https://leetcode.com/HimalayaJhala/">
+                <Image
+                  src="/leetcode.png"
+                  alt="leetcode"
+                  width={50}
+                  height={50}
+                />
+              </a>
+            </div>
 
-              <div className={styles.socials3}>
-                <a href="https://github.com/HimalayaJhala">
-                  <Image
-                    src="/github.png"
-                    alt="leetcode"
-                    width={60}
-                    height={60}
-                  />
-                </a>
-              </div>
+            <div className={styles.socials3}>
+              <a href="https://github.com/HimalayaJhala">
+                <Image
+                  src="/github.png"
+                  alt="leetcode"
+                  width={50}
+                  height={50}
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -342,7 +209,7 @@ const YourComponent = () => {
               className={styles.iphone}
               src="/iPhone15.png"
               alt="phone"
-              width={352}
+              width={350}
               height={650}
             />
             {isClient && (
@@ -370,19 +237,17 @@ const YourComponent = () => {
             )}
           </div>
 
-          <div className={styles.paramob}>
+          <div className={styles.para}>
             <p className={styles.heading1}>
-              I recently developed a modern React Native to-do app that features
-              a sleek and intuitive design inspired by Apple renowned design
-              aesthetics. The app leverages advanced React Native components to
-              create a seamless user experience across both iOS and Android
-              platforms. Using the emulator on my device, I was able to
-              rigorously test and fine-tune the UI/UX to ensure smooth
-              performance and responsiveness. The app includes features like
-              state management with Redux, real-time synchronization, and
-              elegant animations that enhance usability. Its clean interface,
-              combined with efficient functionality, offers users an appealing
-              and productive task management solution.
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the standard dummy text ever since
+              the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not
+              only five centuries, but also the leap into electronic
+              typesetting, remaining essentially unchanged. It was popularised
+              in the 1960s with the release of Letraset sheets containing Lorem
+              Ipsum passages, and more recently with desktop publishing software
+              like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
           </div>
         </div>
@@ -439,15 +304,17 @@ const YourComponent = () => {
             )}
           </div>
 
-          <div className={styles.laptoppara}>
+          <div className={styles.para1}>
             <p className={styles.heading2}>
-              I created a UI/UX replica of Tinder specifically designed for
-              dogs, named Tindog. This project was developed using Bootstrap 5,
-              leveraging its powerful grid system and pre-styled components to
-              achieve a responsive and visually appealing interface. Utilizing
-              my basic core skills., I incorporated features like a carousel,
-              price tags, and many other elements, showcasing my ability to
-              create a comprehensive and delightful application.
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the standard dummy text ever since
+              the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not
+              only five centuries, but also the leap into electronic
+              typesetting, remaining essentially unchanged. It was popularised
+              in the 1960s with the release of Letraset sheets containing Lorem
+              Ipsum passages, and more recently with desktop publishing software
+              like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
           </div>
         </div>
